@@ -109,6 +109,9 @@
     </div>
     <div id="confirmation-area">
         <p>Congratulations!</p>
+        <div class="right">
+            <p id="total-ticket">efe<p>
+        </div>
     </div>
 
     <script>
@@ -157,6 +160,11 @@
             const confirmationArea = document.getElementById("confirmation-area");
             confirmationArea.style.display = "block";
         })
+            const phoneCount = getInputValue('phone');
+            const caseCount = getInputValue('case');
+            document.getElementById('total-ticket').innerText = 'You have purchased ' + phoneCount +' First class and ' + caseCount + ' Economy Tickets! '; 
+            
+        
         
     </script>
 </body>
