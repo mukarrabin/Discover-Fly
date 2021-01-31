@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <!--Header and Menu Section-->
+    <div id="booking-area">
+        <!--Header and Menu Section-->
     <header class="container">
         <nav>
             <ul>
@@ -97,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="booking" class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content">
@@ -105,6 +106,10 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
     </section>
+    </div>
+    <div id="confirmation-area">
+        <p>Congratulations!</p>
+    </div>
 
     <script>
         function handleProductChange(product,isIncrease){
@@ -145,6 +150,14 @@
             const productCount = parseInt(productInput.value);
             return productCount;
         }
+        const loginBtn = document.getElementById("booking");
+        loginBtn.addEventListener("click",function(){
+            const bookingArea = document.getElementById("booking-area");
+            bookingArea.style.display = "none";
+            const confirmationArea = document.getElementById("confirmation-area");
+            confirmationArea.style.display = "block";
+        })
+        
     </script>
 </body>
 
